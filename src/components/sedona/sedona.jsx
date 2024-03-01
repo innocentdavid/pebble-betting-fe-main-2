@@ -9,11 +9,11 @@ import Cat5 from '/images/Cat5.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+// import 'swiper/css';
+// import 'swiper/css/free-mode';
+// import 'swiper/css/pagination';
 
-import '../sedona/styles.css';
+// import '../sedona/styles.css';
 
 // import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
