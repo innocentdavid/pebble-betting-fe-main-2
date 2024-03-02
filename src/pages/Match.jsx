@@ -11,6 +11,12 @@ import NotificationDialog from "../components/notificationModal";
 import axios from "axios";
 import { BASE_URL } from "../config";
 import Layout from "../components/layout";
+import Box from "/images/Box.svg";
+import Art1 from "/images/Art1.svg";
+import Art2 from "/images/Art2.svg";
+import Art3 from "/images/Art3.svg";
+import Art4 from "/images/Art4.svg";
+import Solana from "/images/solana.png";
 
 // import * as anchor from "@project-serum/anchor";
 // import { useUserSOLBalanceStore } from '../wallet/useUserSOLBalanceStore';
@@ -113,7 +119,6 @@ const Match = () => {
   const [pebbleNumber, setPebble] = useState(1);
   const [isAdmin, setAdmin] = useState(false);
 
-
   const [selectedStat, setSelectedStat] = useState(HEMSTARS[0]);
   const [statDetails, setStatDetails] = useState(null);
   const [itemsList, setItemsList] = useState([]);
@@ -188,7 +193,6 @@ const Match = () => {
     setSolValue(walletBalance);
   };
 
-
   const SOLANA_HOST = clusterApiUrl("devnet");
   const connection = useMemo(() => new Connection(SOLANA_HOST), [SOLANA_HOST]);
   const wallet = useWallet();
@@ -251,15 +255,15 @@ const Match = () => {
     }
   };
 
-
   const getExpectWinner = () => {
-    axios.get(`${BASE_URL}/api/expetwinner?bet_id=${matchId}`)
+    axios
+      .get(`${BASE_URL}/api/expetwinner?bet_id=${matchId}`)
       .then((data) => {
         var data_t = data.data;
         if (data_t.status == "success") {
           setMessage({
             title: "Something went wrong",
-            body: "Expected Winner Number Get!!!"
+            body: "Expected Winner Number Get!!!",
           });
           setOpen(true);
         } else {
@@ -354,7 +358,7 @@ const Match = () => {
         leftSide={
           <>
             <div className="flex flex-col bg-gradient-to-br p-2 w-full h-full gap-y-[48px] bg-[#16202B] rounded">
-              <div className="flex flex-row justify-between  p-2 md:p-8 m-8 md:m-2 border-2 border-[#C88300]">
+              <div className="flex flex-row justify-between  p-2 m-8 md:m-2 border-2 border-[#C88300]">
                 <div className="flex flex-col">
                   <p className="text-white text-[32px]">{itemsList.length}</p>
                   <p className="text-[#F2F2F2] p-0">
@@ -362,8 +366,8 @@ const Match = () => {
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-[#F2F2F2]">Next</p>
-                  <p className="text-[#F2F2F2]">Betting in</p>
+                  {/* <p className="text-[#F2F2F2]">Next</p>
+                  <p className="text-[#F2F2F2]">Betting in</p> */}
                   <div className="flex flex-row">
                     <img src="/icons/refresh.svg"></img>
                     <p className="text-white">23:20:19</p>
@@ -372,7 +376,7 @@ const Match = () => {
               </div>
               <div className="flex flex-row items-center justify-center">
                 <div className="h-[1px] bg-white w-16"></div>
-                <p className="text-white">
+                <p className="text-white whitespace-nowrap mx-2">
                   Last {matchId === "bet" ? "Marble" : "Hamstars"} Stat
                 </p>
                 <div className="h-[1px] bg-white w-16"></div>
@@ -391,7 +395,7 @@ const Match = () => {
                         className="mr-3"
                       ></img>
                       <p
-                        className={`rounded-[13px] py-1 !bg-opacity-20 font-bold px-2 mr-3 cursor-pointer`}
+                        className={`rounded-[13px] py-1 !bg-opacity-20 font-bold px-2 mr-1 cursor-pointer`}
                         style={{
                           backgroundColor: `${item?.color}50`,
                           color: item?.color,
@@ -407,16 +411,17 @@ const Match = () => {
                       {i === 0 && (
                         <img
                           src="/images/cup.svg"
-                          style={{ width: "18px", height: "18px" }}
+                          style={{ width: "14px", height: "14px" }}
                         ></img>
                       )}
                       <div className="flex-1" />
 
                       <p
-                        className={`${selectedStat.name === item?.name
-                          ? "text-white"
-                          : "text-gray-600"
-                          } text-sm underline ml-3 cursor-pointer select-none`}
+                        className={`${
+                          selectedStat.name === item?.name
+                            ? "text-white"
+                            : "text-gray-600"
+                        } text-sm underline ml-3 cursor-pointer select-none whitespace-nowrap`}
                         onClick={() => {
                           onViewState(i + 1);
                           setSelectedStat(item);
@@ -519,7 +524,6 @@ const Match = () => {
             </div>
           </>
         }
-
       >
         <div className="flex">
           <div className="w-full">
@@ -555,7 +559,9 @@ const Match = () => {
                           }}
                           className={clsx(
                             "text-white border border-1  h-[48px] flex flex-row items-center gap-x-2 p-1 rounded m-3",
-                            pebbleNumber === i + 1 ? "bg-black" : " to-[#B2D5B2]"
+                            pebbleNumber === i + 1
+                              ? "bg-black"
+                              : " to-[#B2D5B2]"
                           )}
                         >
                           <img
@@ -648,10 +654,42 @@ const Match = () => {
                 </div>
               </div>
             </div>
+
+            <div className="mt-[36px] w-full h-auto border-[0.5px] border-[#4EAF90] border-solid">
+              <div className="flex justify-between items-center mt-4 w-full px-6">
+                <p className="font-inter font-normal text-[#FFFFFF] text-[12px]">
+                  Pick your winner
+                </p>
+                <div className="flex justify-center items-center gap-[6px]">
+                  <img src={Box} alt="" className="" />
+                  <p className="text-[#FFFFFF40] font-inter font-normal text-[12px] ">
+                    0 SOL
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-between items-center mb-[45px] mt-8 px-[83px]">
+                <img src={Art1} alt="" />
+                <div className=" border-[1px] border-[#4EAF90] rounded-[4px] border-solid px-[22px] py-[20px]">
+                  <img src={Art2} alt="" />
+                </div>
+                <img src={Art3} alt="" className="" />
+                <img src={Art4} alt="" />
+              </div>
+
+              <div className="">
+                <div className="flex items-center ">
+                  <div className="bg-[#52545A80] flex items-center justify-center mx-[33px]">
+                    <img src={Solana} alt="" className="" />
+                    <p className="text-[14px] font-Robo font-normal text-[#FFFFFF40]">0.00</p>
+                  </div>
+                  <div className=""></div>
+                </div>
+              </div>
+            </div>
+
             <br />
           </div>
         </div>
-
       </Layout>
     </>
   );

@@ -93,7 +93,7 @@ const Navbar = ({ expand, setExpand }) => {
             </div>
 
             <Button
-              disabled={!IS_BUY_TOKEN_ACTIVATED}
+              // disabled={!IS_BUY_TOKEN_ACTIVATED}
               title={!IS_BUY_TOKEN_ACTIVATED ? "Not Available" : ""}
               className={`bg-[#150C2A] border rounded border-[#4EAF90] capitalize text-base font-bold text-[#4EAF90] ${
                 !IS_BUY_TOKEN_ACTIVATED && "cursor-not-allowed"

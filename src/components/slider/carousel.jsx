@@ -13,12 +13,12 @@ import "swiper/css/navigation";
 import "./styles.css";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Loop } from "@mui/icons-material";
+import { Autoplay } from "swiper/modules";
+// import { Loop } from "@mui/icons-material";
 
 export default function CarouselComp() {
   return (
-    <>
+    <section className="z-10 flex h-auto w-full">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -34,8 +34,7 @@ export default function CarouselComp() {
         modules={Autoplay}
         className="mySwiper"
       >
-      
-      <SwiperSlide>
+        <SwiperSlide>
           <div className="flex-1 min-h-[300px] max-w-full relative flex">
             <div className="md:w-full !w-auto  relative  h-auto">
               <img
@@ -49,15 +48,27 @@ export default function CarouselComp() {
               <div className="w-full h-full text-[#DFFE00CC] text-[10px] md:text-[18px] uppercase flex flex-col items-start justify-start md:items-start md:justify-center min-h-[300px] px-4 md:px-32">
                 <p className="pt-4 md:pt-0">SIGN IN AND WATCH CK</p>
                 <p className="mt-2">REEDEEM HIMSELF</p>
-                <img src={Baby} alt="Baby" className="md:mt-3 !w-5  md:!w-10 md:h-auto" />
+                <img
+                  src={Baby}
+                  alt="Baby"
+                  className="md:mt-3 !w-5  md:!w-10 md:h-auto"
+                />
               </div>
             </div>
           </div>
         </SwiperSlide>
-        
-        
 
-        {/* <SwiperSlide>
+        <SwiperSlide>
+          <div className="w-full relative  h-auto">
+            <img
+              src={carousel1}
+              alt="Carousel"
+              className=" w-full h-full mx-0 object-contain md:my-[32px] "
+            />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
           <div className="flex-1 min-h-[300px] max-w-full relative flex">
             <div className="lg:w-full !w-auto  relative  h-auto">
               <img
@@ -75,8 +86,8 @@ export default function CarouselComp() {
               </div>
             </div>
           </div>
-        </SwiperSlide> */}
+        </SwiperSlide>
       </Swiper>
-    </>
+    </section>
   );
 }

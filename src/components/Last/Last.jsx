@@ -9,10 +9,10 @@ const Last = () => {
             <p className="text-[14px]  text-[#FFFFFF]">Responsible Gaming</p>
             <img src={Fill} alt="" />
         </div>
-        <p className="mt-[40px] text-[13px] font-[400]">
+        <p className="mt-4 lg:mt-[40px] text-[13px] font-[400]">
         LLC and License: TBA
         </p>
-        <p className="mt-[37px] text-[13px] font-[400] mb-[45px]">
+        <p className="mt-4 lg:mt-[37px] text-[13px] font-[400] mb-[45px]">
         © 2023-2024 All Rights Reserved  | Privacy Policy
         </p>
     </div>

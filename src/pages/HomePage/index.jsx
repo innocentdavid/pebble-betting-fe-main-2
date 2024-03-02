@@ -6,7 +6,8 @@ import Layout from "../../components/layout";
 import round from "/images/round.svg";
 import CarouselComp from "../../components/slider/carousel";
 import Last from "../../components/Last/Last";
-
+import TransactionsTable from "../../components/Table/TableComp";
+import Slot from '../../components/Slots/slot'
 const HomePage = () => {
   const [openChat, setOpenChat] = useState(true);
   const [expand, setExpand] = useState(true);
@@ -56,7 +57,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        {/* <Slot /> */}
+        <Slot />
 
         <Sport />
 
@@ -74,6 +75,29 @@ const HomePage = () => {
            
           </div>
         </div> */}
+
+        <div className="w-full items-center h-auto mx-auto flex flex-col mt-[40px]">
+          <div className="flex items-center justify-between w-full ">
+            <div className="flex items-center justify-center gap-2 ">
+              <img src={"./images/ranking.png"} alt="" className="!w-[20px] !h-[20px]" />
+              <p className="text-[16px] font-[700] font-inter mt-1">BETS</p>
+            </div>
+            <div className="flex items-center justify-center space-x-[6px]">
+              <p className="bg-[#2C2C2C] rounded-[4px] py-[5px] px-[12px] text-[12px] font-chakra font-[600]  ">
+                Casino Bets
+              </p>
+              <p className="bg-[#2C2C2C] rounded-[4px] py-[5px] px-[12px] text-[12px]  font-chakra font-[600]  ">
+                Degen
+              </p>
+              <p className="bg-[#2C2C2C] rounded-[4px] py-[5px] px-[12px] text-[12px] font-chakra font-[600] text-[#DFFE00]  ">
+                High Roller
+              </p>
+            </div>
+          </div>
+          <div className="mt-4 w-full h-auto">
+            <TransactionsTable />
+          </div>
+        </div>
 
         <Last />
       </div>

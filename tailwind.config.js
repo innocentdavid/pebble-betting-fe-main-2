@@ -33,6 +33,10 @@ module.exports = withMT({
       },
       fontFamily: {
         jone: ["Jockey One"],
+        chakra: ["Chakra Petch", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        Robo: ['Robofan Free', 'sans-serif']
+                                                
       },
       backgroundImage: {
         btngrad: "linear-gradient(87.03deg, #1EF1A5 -0.04%, #9746FE 99.96%)",

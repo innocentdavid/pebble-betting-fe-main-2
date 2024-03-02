@@ -372,7 +372,7 @@ const Layout = ({ children, isAdmin, leftSide }) => {
               expand ? "min-w-[82%] w-full" : ""
             } relative flex flex-col md:flex-row`}
           >
-            <div className="flex-col gap-5 py-5 px-4 flex-1 h-[calc(100vh-80px)] md:h-[10vh-110px] overflow-y-auto">
+            <div className="flex-col gap-5 py-5 px-4 flex-1 h-[calc(100vh-80px)] md:h-[100vh-110px] overflow-y-auto">
               {children}
               </div>
 
