@@ -45,7 +45,9 @@ export default function CarouselComp() {
             </div>
 
             <div className="absolute top-0 left-0 w-full min-h-full bg-black/50 z-[99]">
-              <div className="w-full h-full text-[#DFFE00CC] text-[10px] md:text-[18px] uppercase flex flex-col items-start justify-start md:items-start md:justify-center min-h-[300px] px-4 md:px-32">
+              <div className="w-full h-full text-[#DFFE00CC] text-[10px] md:text-[18px]
+               uppercase flex flex-col items-start justify-start md:items-start md:justify-center 
+               min-h-[300px] px-4 md:px-32">
                 <p className="pt-4 md:pt-0">SIGN IN AND WATCH CK</p>
                 <p className="mt-2">REEDEEM HIMSELF</p>
                 <img

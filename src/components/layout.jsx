@@ -87,7 +87,7 @@ const HEMSTARS = [
   },
 ];
 const Layout = ({ children, isAdmin, leftSide }) => {
-  console.log(isAdmin);
+  // console.log(isAdmin);
   const { matchId } = useParams();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState({ title: "", body: "" });

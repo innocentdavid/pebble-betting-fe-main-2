@@ -5,9 +5,10 @@ import Sport from "../../components/Sport/Sport";
 import Layout from "../../components/layout";
 import round from "/images/round.svg";
 import CarouselComp from "../../components/slider/carousel";
+import CarouselWithContent from "../../components/CarouselAuto/CarouselWithContent";
 import Last from "../../components/Last/Last";
 import TransactionsTable from "../../components/Table/TableComp";
-import Slot from '../../components/Slots/slot'
+import Slot from "../../components/Slots/slot";
 const HomePage = () => {
   const [openChat, setOpenChat] = useState(true);
   const [expand, setExpand] = useState(true);
@@ -43,9 +44,14 @@ const HomePage = () => {
   return (
     <Layout leftSide={<Navbar expand={expand} setExpand={setExpand} />}>
       <div className="flex flex-col ">
-        <CarouselComp />
+        {/* <CarouselComp /> */}
+        <div className="max-w-[100vw] max-h-[300px] overflow-hidden">
+          <CarouselWithContent />
+        </div>
 
-        {/* <Sedona /> */}
+        <div className="max-w-[100vw] max-h-[300px] overflow-hidden">
+          <Sedona />
+        </div>
 
         <div className=" mt-[42px] flex items-center w-full gap-2 mb-6">
           <img src={round} alt="round" className="" />
@@ -57,7 +63,9 @@ const HomePage = () => {
           </p>
         </div>
 
-        <Slot />
+        <div className="max-w-[100vw] max-h-[300px] overflow-hidden">
+          <Slot />
+        </div>
 
         <Sport />
 
@@ -79,7 +87,11 @@ const HomePage = () => {
         <div className="w-full items-center h-auto mx-auto flex flex-col mt-[40px]">
           <div className="flex items-center justify-between w-full ">
             <div className="flex items-center justify-center gap-2 ">
-              <img src={"./images/ranking.png"} alt="" className="!w-[20px] !h-[20px]" />
+              <img
+                src={"./images/ranking.png"}
+                alt=""
+                className="!w-[20px] !h-[20px]"
+              />
               <p className="text-[16px] font-[700] font-inter mt-1">BETS</p>
             </div>
             <div className="flex items-center justify-center space-x-[6px]">

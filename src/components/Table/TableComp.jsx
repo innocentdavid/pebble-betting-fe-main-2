@@ -155,9 +155,9 @@ export default function TransactionsTable() {
         <table className="w-full min-w-max table-auto ">
           <thead>
             <tr>
-              {TABLE_HEAD.map((head) => (
+              {TABLE_HEAD.map((head, i) => (
                 <th
-                  key={head}
+                  key={`head-${head}-${i+1}`}
                   className="py-4"
                 >
                   <Typography
@@ -192,7 +192,7 @@ export default function TransactionsTable() {
                   : "p-1 ";
 
                 return (
-                  <tr key={name}>
+                  <tr key={`head-${name}-${index+1}`}>
                     {/* Transaction */}
                     <td className={classes}>
                      

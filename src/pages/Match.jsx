@@ -17,6 +17,7 @@ import Art2 from "/images/Art2.svg";
 import Art3 from "/images/Art3.svg";
 import Art4 from "/images/Art4.svg";
 import Solana from "/images/solana.png";
+import Margin from "/images/Star.svg";
 
 // import * as anchor from "@project-serum/anchor";
 // import { useUserSOLBalanceStore } from '../wallet/useUserSOLBalanceStore';
@@ -655,7 +656,7 @@ const Match = () => {
               </div>
             </div>
 
-            <div className="mt-[36px] w-full h-auto border-[0.5px] border-[#4EAF90] border-solid">
+            <div className="mt-[36px] w-full  h-auto border-[0.5px] border-[#4EAF90] border-solid">
               <div className="flex justify-between items-center mt-4 w-full px-6">
                 <p className="font-inter font-normal text-[#FFFFFF] text-[12px]">
                   Pick your winner
@@ -667,22 +668,584 @@ const Match = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center mb-[45px] mt-8 px-[83px]">
-                <img src={Art1} alt="" />
-                <div className=" border-[1px] border-[#4EAF90] rounded-[4px] border-solid px-[22px] py-[20px]">
-                  <img src={Art2} alt="" />
-                </div>
-                <img src={Art3} alt="" className="" />
-                <img src={Art4} alt="" />
-              </div>
 
-              <div className="">
-                <div className="flex items-center ">
-                  <div className="bg-[#52545A80] flex items-center justify-center mx-[33px]">
-                    <img src={Solana} alt="" className="" />
-                    <p className="text-[14px] font-Robo font-normal text-[#FFFFFF40]">0.00</p>
+              <div className="flex w-full h-auto items-center  ">
+                <div className=" overflow-x-auto h-auto items-center flex gap-[5px] mb-10  w-full">
+                  <div className="max-w-[300px] min-w-[210px] lg:w-full w-fit flex-col flex items-center justify-center">
+                    <div           className="flex justify-center items-center mb-6 mt-8  border-[1px] border-[#000000] 
+                rounded-[4px] border-solid px-[22px] py-[20px] "
+                    >
+                      <img src={Art1} alt="" />
+                     
+                    </div>
+                    <div className=" w-full h-auto flex justify-center  items-center ">
+                      <div className="bg-[#52545A80] border border-solid border-[#000000]  rounded-l-[4px] rounded-b-[4px]   flex items-center justify-center ">
+                        <img src={Solana} alt="" className=" mx-1" />
+                        <input
+                          type="number"
+                          placeholder="0.00"
+                          className="placeholder-[#FFFFFF40]  font-Robo py-2 text-[14px] outline-none w-[50px] text-[#FFFFFF40] mx-2 bg-[#52545A10] "
+                        />
+                      </div>
+                      <div className="bg-[#121D28] border border-solid border-[#000000]  rounded-r-[4px] rounded-b-[4px]">
+                        <button className="text-[#B1B6C6] cursor-pointer font-inter p-[2px] m-[6px] font-[800] text-[14px]">
+                          Place Bet
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex ml-24 mt-[5px] rounded-[2px] bg-[#D9D9D90D] justify-end">
+                      <p className="px-1 text-white/40 text-[14px] font-[400] font-Inter">
+                        Max
+                      </p>
+                    </div>
+
+                    <div className="flex w-full flex-col mt-[6px] items-center justify-center">
+                      <div className="flex w-full px-[13px] py-[13px] justify-between items-center ">
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          USER
+                        </p>
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          WAGER
+                        </p>
+                      </div>
+
+                      <div className="w-full  space-y-[1px]">
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px]">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between  py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08]  justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full pb-[40px] bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className=""></div>
+                  <div className="max-w-[300px] min-w-[210px] lg:w-full w-fit flex-col flex items-center justify-center">
+                    <div           className="flex justify-center items-center  mt-8 r mb-6  border-[1px] border-[#4EAF90] 
+                rounded-[4px] border-solid px-[22px] py-[20px] "
+                    >
+                      <img src={Art2} alt="" />
+                     
+                    </div>
+                    <div className=" w-full h-auto flex justify-center  items-center ">
+                      <div className="bg-[#52545A80] border border-solid border-[#000000]  rounded-l-[4px] rounded-b-[4px]   flex items-center justify-center ">
+                        <img src={Solana} alt="" className=" mx-1" />
+                        <input
+                          type="number"
+                          placeholder="0.00"
+                          className="placeholder-[#FFFFFF40]  font-Robo py-2 text-[14px] outline-none w-[50px] text-[#FFFFFF40] mx-2 bg-[#52545A10] "
+                        />
+                      </div>
+                      <div className="bg-[#121D28] border border-solid border-[#000000]  rounded-r-[4px] rounded-b-[4px]">
+                        <button className="text-[#B1B6C6] cursor-pointer font-inter p-[2px] m-[6px] font-[800] text-[14px]">
+                          Place Bet
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex ml-24 mt-[5px] rounded-[2px] bg-[#D9D9D90D] justify-end">
+                      <p className="px-1 text-white/40 text-[14px] font-[400] font-Inter">
+                        Max
+                      </p>
+                    </div>
+
+                    <div className="flex w-full flex-col mt-[6px] items-center justify-center">
+                      <div className="flex w-full px-[13px] py-[13px] justify-between items-center ">
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          USER
+                        </p>
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          WAGER
+                        </p>
+                      </div>
+
+                      <div className="w-full  space-y-[1px]">
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px]">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between  py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08]  justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full pb-[40px] bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="max-w-[300px] min-w-[210px] lg:w-full w-fit flex-col flex items-center justify-center">
+                    <div           className="flex justify-center items-center mb-6 mt-8  border-[1px] border-[#000000] 
+                rounded-[4px] border-solid px-[22px] py-[20px] "
+                    >
+                      <img src={Art3} alt="" />
+                     
+                    </div>
+                    <div className=" w-full h-auto flex justify-center  items-center ">
+                      <div className="bg-[#52545A80] border border-solid border-[#000000]  rounded-l-[4px] rounded-b-[4px]   flex items-center justify-center ">
+                        <img src={Solana} alt="" className=" mx-1" />
+                        <input
+                          type="number"
+                          placeholder="0.00"
+                          className="placeholder-[#FFFFFF40]  font-Robo py-2 text-[14px] outline-none w-[50px] text-[#FFFFFF40] mx-2 bg-[#52545A10] "
+                        />
+                      </div>
+                      <div className="bg-[#121D28] border border-solid border-[#000000]  rounded-r-[4px] rounded-b-[4px]">
+                        <button className="text-[#B1B6C6] cursor-pointer font-inter p-[2px] m-[6px] font-[800] text-[14px]">
+                          Place Bet
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex ml-24 mt-[5px] rounded-[2px] bg-[#D9D9D90D] justify-end">
+                      <p className="px-1 text-white/40 text-[14px] font-[400] font-Inter">
+                        Max
+                      </p>
+                    </div>
+
+                    <div className="flex w-full flex-col mt-[6px] items-center justify-center">
+                      <div className="flex w-full px-[13px] py-[13px] justify-between items-center ">
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          USER
+                        </p>
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          WAGER
+                        </p>
+                      </div>
+
+                      <div className="w-full  space-y-[1px]">
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px]">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between  py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08]  justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full pb-[40px] bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="max-w-[300px] min-w-[210px] lg:w-full w-fit flex-col flex items-center justify-center">
+                    <div           className="flex justify-center items-center mb-6 mt-8  border-[1px] border-[#000000] 
+                rounded-[4px] border-solid px-[22px] py-[20px] "
+                    >
+                      <img src={Art4} alt="" />
+                     
+                    </div>
+                    <div className=" w-full h-auto flex justify-center  items-center ">
+                      <div className="bg-[#52545A80] border border-solid border-[#000000]  rounded-l-[4px] rounded-b-[4px]   flex items-center justify-center ">
+                        <img src={Solana} alt="" className=" mx-1" />
+                        <input
+                          type="number"
+                          placeholder="0.00"
+                          className="placeholder-[#FFFFFF40]  font-Robo py-2 text-[14px] outline-none w-[50px] text-[#FFFFFF40] mx-2 bg-[#52545A10] "
+                        />
+                      </div>
+                      <div className="bg-[#121D28] border border-solid border-[#000000]  rounded-r-[4px] rounded-b-[4px]">
+                        <button className="text-[#B1B6C6] cursor-pointer font-inter p-[2px] m-[6px] font-[800] text-[14px]">
+                          Place Bet
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex ml-24 mt-[5px] rounded-[2px] bg-[#D9D9D90D] justify-end">
+                      <p className="px-1 text-white/40 text-[14px] font-[400] font-Inter">
+                        Max
+                      </p>
+                    </div>
+
+                    <div className="flex w-full flex-col mt-[6px] items-center justify-center">
+                      <div className="flex w-full px-[13px] py-[13px] justify-between items-center ">
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          USER
+                        </p>
+                        <p className="text-[11.06px] font-inter font-[700]  text-[#676D7C]">
+                          WAGER
+                        </p>
+                      </div>
+
+                      <div className="w-full  space-y-[1px]">
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px]">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between  py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full bg-[#CBD7FF08]  justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex w-full pb-[40px] bg-[#CBD7FF08] justify-between py-[6px] rounded-[4px] items-center">
+                          <div className="flex items-center pl-[10px] gap-[6px] ">
+                            <img
+                              src={Margin}
+                              className="w-[12px] h-[12px] object-contain"
+                            />
+                            <p className="font-[700] text-[10px] font-inter capitalize text-[#68758C]">
+                              3dQp..HU7f
+                            </p>
+                          </div>
+                          <div className="pr-[12px]">
+                            <p className="text-[#B1B6C6] text-[13.23] font-inter font-[500]">
+                              $0.00
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                 
                 </div>
               </div>
             </div>
