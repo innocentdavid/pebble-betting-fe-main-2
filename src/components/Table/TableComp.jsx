@@ -172,8 +172,11 @@ export default function TransactionsTable() {
         <table className="w-full min-w-max table-auto ">
           <thead>
             <tr>
-              {TABLE_HEAD.map((head) => (
-                <th key={head} className="py-4">
+              {TABLE_HEAD.map((head, i) => (
+                <th
+                  key={`head-${head}-${i+1}`}
+                  className="py-4"
+                >
                   <Typography
                     variant="small"
                     color="blue-gray"
@@ -204,7 +207,7 @@ export default function TransactionsTable() {
                 const classes = isLast ? "p-1" : "p-1 ";
 
                 return (
-                  <tr key={name}>
+                  <tr key={`head-${name}-${index+1}`}>
                     {/* Transaction */}
                     <td className={classes}>
                       <div className="flex items-center gap-3">

@@ -6,6 +6,7 @@ import "./App.css";
 import WalletContextProvider from './pages/wallet/WalletContext.jsx';
 import HaryBet from "./pages/HaryBet/index.jsx";
 import Match from './pages/Match.jsx';
+import Dashboard from './pages/Dashboard/index.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/match/:matchId' element={<Match />} />
           <Route path='/bet' element={<Bet />} />
           <Route path="/harybet" element={<HaryBet />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </WalletContextProvider>
     </>
