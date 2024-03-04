@@ -132,11 +132,6 @@ const TABLE_ROWS = [
   },
 ];
 
-const games = [
-  { id: "marbles", name: "Marbles", thumbnail: "/images/Hams.svg" },
-  { id: "hemsters", name: "Hemsters", thumbnail: "/images/Hams.svg" },
-];
-
 export default function TransactionsTable() {
   const { bets } = useBet();
 
@@ -194,12 +189,12 @@ export default function TransactionsTable() {
                 {
                   img,
                   name,
-                  amount,
-                  date,
-                  status,
+                  // amount,
+                  // date,
+                  // status,
                   account,
-                  accountNumber,
-                  expiry,
+                  // accountNumber,
+                  // expiry,
                 },
                 index
               ) => {

@@ -4,7 +4,17 @@ import Sport1 from '/images/Sport1.svg';
 import Sport2 from '/images/Sport2.svg';
 import Sport3 from '/images/Sport3.svg';
 import Sport4 from '/images/Sport4.svg'
+// import { supabase } from "../../lib/supabaseClient";
 const Sport = () => {
+
+  // const {error} = await supabase.from('bets').insert({
+  //   game_id: "",
+  //   user_id: "",
+  //   bet_amount: "",
+  //   multiplier: "",
+  //   payout: "",
+  // })
+  
   return (
     <div className="w-full h-auto mx-auto flex flex-col mt-[40px]">
       <div className="flex items-center w-full gap-2 mb-6">
@@ -19,7 +29,7 @@ const Sport = () => {
           COMING SOON
         </p>
       </div>
-      <div className="flex flex-wrap items-center justify-center my-4 gap-1">
+      <div className="flex items-center justify-center my-4 gap-1">
         <div className="max-w-[207px] w-full h-auto flex flex-col items-center pb-[22px] rounded-b-[12px] border-solid border-b-2 border-[#DFFE00] justify-center">
             <img src={Sport1} alt="Sport1" />
             <p className="mt-[7px] py-[8px] text-[14px] text-[#FFFFFFCC]/80">LIVE SPORTS</p>
