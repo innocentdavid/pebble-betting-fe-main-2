@@ -9,7 +9,7 @@ import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 import { transferSol } from "../contract/bean";
 import NotificationDialog from "../components/notificationModal";
 import axios from "axios";
-import { BASE_URL } from "../config";
+import { BASE_URL } from "../lib/config";
 import Layout from "../components/layout";
 import Box from "/images/Box.svg";
 import Art1 from "/images/Art1.svg";

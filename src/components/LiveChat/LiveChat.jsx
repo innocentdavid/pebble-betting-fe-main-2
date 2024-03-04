@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 // import { FaTimes } from "react-icons/fa";
 import io from "socket.io-client";
-import { BASE_URL } from "../../config";
+import { BASE_URL } from "../../lib/config";
 
 const socket = io.connect(BASE_URL);
 const username = "dev_cent";

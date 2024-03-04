@@ -5,7 +5,7 @@ import LiveChat from "./LiveChat/LiveChat";
 import Header from "./header";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../config";
+import { BASE_URL } from "../lib/config";
 // import Match from "../pages/";
 
 const MARBLES = [

@@ -3,11 +3,11 @@ import { useRouter } from "../../hooks/use-router";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useState } from "react";
 import NotificationDialog from "../notificationModal";
-import LiveMatche from "/images/livestream1.svg";
+// import LiveMatche from "/images/livestream1.svg";
 // import LiveMatche1 from "/images/Live Stream.svg";
 import { FaAngleUp } from "react-icons/fa";
 import PropTypes from "prop-types";
-import { IS_BUY_TOKEN_ACTIVATED } from "../../config";
+import { IS_BUY_TOKEN_ACTIVATED } from "../../lib/config";
 
 const Navbar = ({ expand, setExpand }) => {
   const router = useRouter();

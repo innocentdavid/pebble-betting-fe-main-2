@@ -19,9 +19,16 @@ import {
 import Hams from "/images/Hams.svg";
 import Margin from "/images/margin.png";
 import Solana from "/images/solana.png";
+import { useBet } from "../../hooks/useBet";
 
-
-const TABLE_HEAD = ["Game", "User", "Time", "Bet Amount", "Multiplier", "Payout",];
+const TABLE_HEAD = [
+  "Game",
+  "User",
+  "Time",
+  "Bet Amount",
+  "Multiplier",
+  "Payout",
+];
 
 const TABLE_ROWS = [
   {
@@ -125,7 +132,17 @@ const TABLE_ROWS = [
   },
 ];
 
+const games = [
+  { id: "marbles", name: "Marbles", thumbnail: "/images/Hams.svg" },
+  { id: "hemsters", name: "Hemsters", thumbnail: "/images/Hams.svg" },
+];
+
 export default function TransactionsTable() {
+  const { bets } = useBet();
+
+  console.log("bets");
+  console.log(bets);
+
   return (
     <Card className="h-full w-full bg-black ">
       {/* <CardHeader floated={false} shadow={false} className="rounded-none">
@@ -156,10 +173,7 @@ export default function TransactionsTable() {
           <thead>
             <tr>
               {TABLE_HEAD.map((head) => (
-                <th
-                  key={head}
-                  className="py-4"
-                >
+                <th key={head} className="py-4">
                   <Typography
                     variant="small"
                     color="blue-gray"
@@ -187,15 +201,12 @@ export default function TransactionsTable() {
                 index
               ) => {
                 const isLast = index === TABLE_ROWS.length - 1;
-                const classes = isLast
-                  ? "p-1"
-                  : "p-1 ";
+                const classes = isLast ? "p-1" : "p-1 ";
 
                 return (
                   <tr key={name}>
                     {/* Transaction */}
                     <td className={classes}>
-                     
                       <div className="flex items-center gap-3">
                         <img
                           src={img}
@@ -212,7 +223,7 @@ export default function TransactionsTable() {
                         </Typography>
                       </div>
                     </td>
-                    
+
                     {/* New */}
                     <td className={classes}>
                       <div className="flex items-center">
@@ -263,21 +274,24 @@ export default function TransactionsTable() {
                     {/* Bet */}
                     <td className={classes}>
                       <div className="flex justify-center items-center ">
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal text-[14px] font-chakra text-[#FFFFFF]"
-                      >
-                        {/* {amount} */}
-                       1
-                      </Typography>
-                      <div className="">
-                        <img src={Solana} alt="" className="w-[21px] h-[11px]"/>
-                      </div>
+                        <Typography
+                          variant="small"
+                          color="blue-gray"
+                          className="font-normal text-[14px] font-chakra text-[#FFFFFF]"
+                        >
+                          {/* {amount} */}1
+                        </Typography>
+                        <div className="">
+                          <img
+                            src={Solana}
+                            alt=""
+                            className="w-[21px] h-[11px]"
+                          />
+                        </div>
                       </div>
                     </td>
-                   
-                   {/* Multiplier */}
+
+                    {/* Multiplier */}
                     <td className={classes}>
                       <Typography
                         variant="small"
@@ -288,21 +302,25 @@ export default function TransactionsTable() {
                         x5000.00
                       </Typography>
                     </td>
-                  
-                  {/* Payout */}
+
+                    {/* Payout */}
                     <td className={classes}>
                       <div className="flex justify-start items-center ">
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal text-[#FFFFFF] text-[14px] font-chakra"
-                      >
-                        {/* {amount} */}
-                     5000
-                      </Typography>
-                      <div className="">
-                        <img src={Solana} alt="" className="w-[21px] h-[11px]"/>
-                      </div>
+                        <Typography
+                          variant="small"
+                          color="blue-gray"
+                          className="font-normal text-[#FFFFFF] text-[14px] font-chakra"
+                        >
+                          {/* {amount} */}
+                          5000
+                        </Typography>
+                        <div className="">
+                          <img
+                            src={Solana}
+                            alt=""
+                            className="w-[21px] h-[11px]"
+                          />
+                        </div>
                       </div>
                     </td>
 
@@ -322,7 +340,7 @@ export default function TransactionsTable() {
                         />
                       </div>
                     </td> */}
-                   
+
                     {/* Account */}
                     {/* <td className={classes}>
                       <div className="flex items-center gap-3">
