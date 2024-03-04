@@ -29,7 +29,7 @@ const Sport = () => {
           COMING SOON
         </p>
       </div>
-      <div className="flex items-center justify-center my-4 gap-1">
+      <div className="flex flex-wrap md:flex-nowrap items-center w-full md:px-6 lg:px-0 justify-center my-4 gap-1">
         <div className="max-w-[207px] w-full h-auto flex flex-col items-center pb-[22px] rounded-b-[12px] border-solid border-b-2 border-[#DFFE00] justify-center">
             <img src={Sport1} alt="Sport1" />
             <p className="mt-[7px] py-[8px] text-[14px] text-[#FFFFFFCC]/80">LIVE SPORTS</p>

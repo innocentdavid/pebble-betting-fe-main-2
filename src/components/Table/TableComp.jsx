@@ -139,7 +139,7 @@ export default function TransactionsTable() {
   console.log(bets);
 
   return (
-    <Card className="h-full w-full bg-black ">
+    <Card className="h-full w-full bg-black overflow-auto ">
       {/* <CardHeader floated={false} shadow={false} className="rounded-none">
         <div className="mb-4 flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>

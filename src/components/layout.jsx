@@ -354,7 +354,7 @@ const Layout = ({ children, isAdmin, leftSide }) => {
     }
   };
   return (
-    <div className="bg-[#0D0F11] h-screen overflow-hidden">
+    <div className="bg-[#0D0F11] h-screen overflow-auto md:overflow-hidden">
       <div className="w-full flex flex-col _max-w-[1440px] mx-auto">
         <Header openChat={openChat} setOpenChat={setOpenChat} />
 
@@ -372,7 +372,7 @@ const Layout = ({ children, isAdmin, leftSide }) => {
               expand ? "min-w-[82%] w-full" : ""
             } relative flex flex-col md:flex-row`}
           >
-            <div className="flex-col gap-5 py-5 px-4 flex-1 h-[calc(100vh-80px)] md:h-[100vh-110px] overflow-y-auto">
+            <div className="flex-col gap-5 py-5 px-4 flex-1 _h-[calc(100vh-80px)] md:h-[calc(100vh-110px)] overflow-y-auto">
               {children}
               </div>
 

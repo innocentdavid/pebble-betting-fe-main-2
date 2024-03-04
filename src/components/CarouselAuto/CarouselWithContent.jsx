@@ -9,11 +9,12 @@ export default function CarouselWithContent() {
     <Carousel 
     autoplay= "true"
     autoplayDelay= {5000}
-    loop="true"
+    loop={true}
+    transition={{ duration: 1.5 }}
     navigation=""
     prevArrow=""
     nextArrow=""
-    className="rounded-xl">
+    className="rounded-xl gap-4">
       <div className="relative h-auto w-full">
         <img
           // src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
@@ -23,20 +24,20 @@ export default function CarouselWithContent() {
         />
         <div className="absolute inset-0 grid h-auto w-full place-items-center bg-black/40">
           <div className="w-full   h-auto text-[#DFFE00CC] text-[10px] md:text-[16px]
-               uppercase flex flex-col md:items-start md:justify-center font-chakra font-[500]
-                px-4 lg:pl-10 ">
-          <div className="bg-[#D9D9D926] px-1 py-2">
+               uppercase flex flex-col md:items-start md:justify-center font-chakra 
+                px-4 lg:pl-10">
+          <div className="bg-[#D9D9D926] w-[150px] max-w-[300px] md:w-full px-1 md:py-2">
             <Typography
               // variant=""
               // color="white"
-              className=""
+              className="text-[12px] md:text-[16px] font-chakra font-[500]"
             >
               SIGN IN AND WATCH CK
             </Typography>
             <Typography
               // variant=""
               // color="white"
-              className=""
+              className="text-[12px] md:text-[16px] font-chakra  font-[500]"
             >
               REEDEEM HIMSELF
             </Typography>
@@ -45,6 +46,38 @@ export default function CarouselWithContent() {
           </div>
         </div>
       </div>
+      <div className="relative h-auto w-full">
+        <img
+          // src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+        src={carousel2}
+          alt="image 1"
+          className="h-auto w-full object-cover"
+        />
+        <div className="absolute inset-0 grid h-auto w-full place-items-center   bg-black/40">
+          <div className="w-full   h-auto text-[#DFFE00CC] text-[10px] md:text-[16px]
+               uppercase flex flex-col md:items-start md:justify-center font-chakra 
+                px-4 lg:pl-10">
+          <div className="bg-[#D9D9D926] w-[150px] max-w-[400px] md:w-full px-1 md:py-2">
+            <Typography
+              // variant=""
+              // color="white"
+              className="text-[10px] md:text-[16px] font-chakra  md:font-[600]"
+            >
+              Enjoy world of Live stream betting
+            </Typography>
+            <Typography
+              // variant=""
+              // color="white"
+              className="text-[8px] md:text-[12px] md:mt-2 text-[#FFFFFF] font-chakra font-[500] md:font-[600]"
+            >
+              Your favorite Marble awaits you
+            </Typography>
+            <img src={Baby} alt="Baby" className="md:mt-2 w-[27px] h-[22px]"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    
       {/* <div className="relative h-full w-full">
         <img
           src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
