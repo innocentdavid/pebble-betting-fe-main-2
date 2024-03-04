@@ -11,8 +11,8 @@ const Dashboard = () => {
   return (
     <div className="bg-black w-full h-screen">
       <Header />
-      <div className="mt-6 flex justify-center items-center  w-full">
-        <div className="flex md:min-w-[250px] justify-start  ml-[24px] items-start w-auto">
+      <div className="mt-6 flex justify-center flex-wrap md:flex-nowrap  items-center  w-full">
+        <div className="flex md:min-w-[250px] justify-start  md:ml-[24px] items-start w-full md:w-auto">
           <p className=" bg-[#52545A40] text-[#DFFE00] px-[35.5px] py-4 font-sans uppercase font-[400] text-[18px] rounded-full w-auto">
             Start Betting
           </p>
@@ -30,7 +30,7 @@ const Dashboard = () => {
           <div className="bg-[#DFFE00] rounded-[8px] ">
             <div className="flex justify-center items-center gap-[5px] my-[26px] mx-[16px]">
               <img src={Bird} alt="abox" />
-              <p className="text-[18px] text-[#000000] font-inter font-[800] ">
+              <p className="text-[16px] md:text-[18px] text-[#000000] font-inter font-[800] ">
                 REFERRALS
               </p>
             </div>
@@ -39,7 +39,7 @@ const Dashboard = () => {
       </div>
 
       <div className="bg-[#0D0F11]  mt-[2px] pb-[48px]  w-full h-full max-h-[600px]">
-        <div className=" mx-[17px] b-[48px]  border-[#00FFA333] border-[0.5px] border-solid rounded-[6px] h-full">
+        <div className=" mx-[17px] mb-[48px]  border-[#00FFA333] border-[0.5px] border-solid rounded-[6px] h-full">
           <div className="flex flex-col items-center justify-center">
             <div className="flex items-center gap-2 justify-center">
               <img src={Team} alt="" className="" />
@@ -50,13 +50,13 @@ const Dashboard = () => {
             <p className="text-[#B1B6C6] text-[24px] font-normal font-sans">
               Refferals.
             </p>
-            <div className="flex justify-center max-w-[687px] w-full items-center bg-[#16202B66]">
+            <div className="flex justify-center  md:max-w-[687px] w-auto px-10 md:px-20 items-center bg-[#16202B66]">
               <div className="flex justify-center flex-col items-center py-2">
                 <h1 className="text-[18px] text-[#B1B6C6] font-normal font-sans">Your Code</h1>
-                <p className="mt-2 text-[14px] text-[rgb(177,182,198)] font-normal font-sans  ">Share this code with your friends to earn 1% of their profits!</p>
-              <div className="text-[#B1B6C6] mt-2 p-[9px] bg-[#14202D] border border=[#3C4450] rounded-[12px] text-[36px] font-400 fomt-sans">98mpw974</div>
+                <p className="mt-2 text-[14px] text-[rgb(177,182,198)] text-center font-normal font-sans  ">Share this code with your friends to earn 1% of their profits!</p>
+              <div className="text-[#B1B6C6] mt-2 p-[9px] bg-[#14202D] border border-[#3C4450] rounded-[12px] text-[18px] md:text-[36px] font-400 fomt-sans">98mpw974</div>
               <div className=" mt-2 flex items-center justify-center gap-2">
-                <div className="bg-[#14202D] p-2 text-[18px] font-normal font-sans text-[#B1B6C6] ">
+                <div className="bg-[#14202D] p-2 text-[14px] md:text-[18px] font-normal font-sans text-[#B1B6C6] ">
                 https://sedona.games/?r=98mpw974
                 </div>
                 <button className="bg-[#14202D] border border-[#3C4450] flex justify-center flex-col items-center 
@@ -67,6 +67,26 @@ const Dashboard = () => {
                 </button>
               </div>
               </div>
+            </div>
+          </div>
+
+          <div className="flex items-center   flex-col w-full mt-2 bg-[#16202B33] justify-center">
+            <div className="flex max-w-[500px] w-full justify-start">
+            <p className="font-sans text-[#B1B6C6]  left-0 font-[400] text-[18px]">Referral History</p>
+            </div>
+            <div className="flex items-center flex-wrap justify-center gap-2">
+              <div className="bg-[#14202D] px-8 py-[1] rounded-[2px]">
+                <p className="text-[14px] font-[400] font-sans text-[#B1B6C6]">Date</p>
+                </div>
+                <div className="bg-[#14202D] px-8 py-[1] rounded-[2px]">
+                <p className="text-[14px] font-[400] font-sans text-[#B1B6C6]">Amount Received</p>
+                </div>
+                <div className="bg-[#14202D] px-8 py-[1] rounded-[2px]">
+                <p className="text-[14px] font-[400] font-sans text-[#B1B6C6]">Race ID</p>
+                </div>
+                <div className="bg-[#14202D] px-8 py-[1] rounded-[2px]">
+                <p className="text-[14px] font-[400] font-sans text-[#B1B6C6]">User ID</p>
+                </div>
             </div>
           </div>
         </div>
