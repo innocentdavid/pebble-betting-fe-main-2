@@ -35,7 +35,8 @@ module.exports = withMT({
         jone: ["Jockey One"],
         chakra: ["Chakra Petch", "sans-serif"],
         inter: ["Inter", "sans-serif"],
-        Robo: ['Robofan Free', 'sans-serif']
+        Robo: ['Robofan Free', 'sans-serif'],
+        poppins: ["Poppins", "sans-serif"]
                                                 
       },
       backgroundImage: {

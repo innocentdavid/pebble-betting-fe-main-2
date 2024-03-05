@@ -9,7 +9,7 @@ export default function CarouselWithContent() {
     <Carousel 
     autoplay= "true"
     autoplayDelay= {5000}
-    loop={true}
+    loop="true"
     transition={{ duration: 1.5 }}
     navigation=""
     prevArrow=""
