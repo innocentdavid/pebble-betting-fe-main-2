@@ -13,7 +13,7 @@ const Header = ({ openChat, setOpenChat }) => {
       </div>
 
       <div className="hidden lg:block basis-1/3">
-        <div className="flex flex-row justify-center items-center h-full">
+        {/* <div className="flex flex-row justify-center items-center h-full">
           <a
             className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary mx-4"
             href="https://Instagram.com/sedonagames"
@@ -66,7 +66,7 @@ const Header = ({ openChat, setOpenChat }) => {
               />
             </div>
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className="w-full lg:basis-1/3 flex flex-row justify-end">
