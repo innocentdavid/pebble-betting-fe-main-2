@@ -670,7 +670,7 @@ const Match = () => {
               </div>
 
               <div className="flex w-full h-auto items-center  ">
-                <div className=" overflow-x-auto h-auto items-center flex gap-[5px] mb-10  w-full">
+                <div className=" overflow-x-auto max-w-[100vw] md:px-10 lg:px-0 h-auto items-center flex gap-[5px] mb-10  w-full">
                   <div className="max-w-[300px] min-w-[210px] lg:w-full w-fit flex-col flex items-center justify-center">
                     <div           className="flex justify-center items-center mb-6 mt-8  border-[1px] border-[#000000] 
                 rounded-[4px] border-solid px-[22px] py-[20px] "
